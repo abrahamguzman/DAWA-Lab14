@@ -14,6 +14,7 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { VerProductoComponent } from './pages/productos/ver-producto/ver-producto.component';
 import { EditarProductosComponent } from './pages/productos/editar-productos/editar-productos.component';
 import { ListarPrestamoComponent } from './pages/prestamo/listar-prestamo/listar-prestamo.component';
+import { CrearPrestamoComponent } from './pages/prestamo/crear-prestamo/crear-prestamo.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ListarPrestamoComponent } from './pages/prestamo/listar-prestamo/listar
     NavbarComponent,
     VerProductoComponent,
     EditarProductosComponent,
-    ListarPrestamoComponent
+    ListarPrestamoComponent,
+    CrearPrestamoComponent
   ],
   imports: [
     BrowserModule,

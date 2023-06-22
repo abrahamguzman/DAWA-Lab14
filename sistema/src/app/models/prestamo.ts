@@ -2,7 +2,7 @@ export class Prestamo {
 
     _id?: string;
     socio: string;
-    fecha: Date;
+    fecha?: Date;
     numero_pelicula: number;
 
 

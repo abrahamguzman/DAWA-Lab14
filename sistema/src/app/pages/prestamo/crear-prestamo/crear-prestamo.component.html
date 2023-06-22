@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<section class="content">
+    <div class="container-fluid">
+      <div class="row m-t-sm">
+        <div class="col-md-15">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="col-md-12 col-sm-12" id="form" style="display:block;">
+                        <div class="panel panel-filled">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-12"><h5 class="m-t-xs">Agregar Nuevo Préstamo</h5></div>
+                                </div>
+                                <form [formGroup]="prestamoForm" (ngSubmit)="agregarPrestamo()">
+                                    <div class="form-group">
+                                        <label>Socio</label>
+                                        <input type="text" formControlName="socio"
+                                            class="form-control" placeholder="Ingresar Socio">
+                                        <div class="text-danger"
+                                            *ngIf="prestamoForm.get('socio')?.hasError('required') && 
+                                                    prestamoForm.get('socio')?.touched">
+                                            <span>El prestamo <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>N° Película</label>
+                                        <input type="text" formControlName="pelicula" 
+                                            class="form-control" placeholder="Ingresar Pelicula">
+                                        <div class="text-danger"
+                                            *ngIf="prestamoForm.get('pelicula')?.hasError('required') && 
+                                                    prestamoForm.get('pelicula')?.touched">
+                                            <span>La categoria <strong>es obligatoria</strong></span>
+                                        </div>
+                                    </div>
+                                    <div  class="col-sm-12 text-right">
+                                        <div class="panel-body buttons-margin">
+                                           <button type="submit" [disabled]="prestamoForm.invalid"  class="btn btn-w-md btn-success">Guardar</button>&nbsp;&nbsp;
+                                           <button class="btn btn-w-md btn-warning" routerLink="/listar-prestamos">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+      </div>
+    </div>
+  </section>
+

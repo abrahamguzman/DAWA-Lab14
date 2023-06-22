@@ -38,7 +38,7 @@ export class LoginComponent {
 
     console.log(this.dataLogin.nombreUsuario);
 
-    this.router.navigate(['/listar-productos'])
+    this.router.navigate(['/listar-prestamos'])
 
   }
 
